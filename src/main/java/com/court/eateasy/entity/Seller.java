@@ -5,10 +5,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotBlank;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 @Entity
 @Table(name = "seller")
@@ -16,6 +13,7 @@ import lombok.Setter;
 @Setter
 @Getter
 @AllArgsConstructor
+@NoArgsConstructor
 public class Seller {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -28,4 +26,5 @@ public class Seller {
     private String password;
     private String image;
     private String description;
+
 }
