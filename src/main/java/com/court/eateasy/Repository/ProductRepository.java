@@ -1,9 +1,10 @@
 package com.court.eateasy.Repository;
 
-import com.court.eateasy.entity.Sellers;
+import com.court.eateasy.entity.Products;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface SellerRepository extends JpaRepository<Sellers, Long> {
+public interface ProductRepository extends JpaRepository<Products,Long> {
+
 }

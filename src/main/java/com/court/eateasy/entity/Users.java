@@ -13,7 +13,7 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @Data
-public class User {
+public class Users {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -22,7 +22,7 @@ public class User {
     @Column(nullable = false, unique = true)
     private String mobileNumber;
 
-    public User() {
+    public Users() {
         super();
     }
 }

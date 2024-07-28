@@ -1,7 +1,7 @@
 package com.court.eateasy.service;
 
 import com.court.eateasy.Repository.SellerRepository;
-import com.court.eateasy.entity.Seller;
+import com.court.eateasy.entity.Sellers;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -12,11 +12,11 @@ public class SellerService {
     @Autowired
     private SellerRepository sellerRepository;
 
-    public void addSeller(Seller seller){
-        sellerRepository.save(seller);
+    public void addSeller(Sellers sellers){
+        sellerRepository.save(sellers);
     }
 
-    public List<Seller> getAllSellers(){
+    public List<Sellers> getAllSellers(){
         return sellerRepository.findAll();
     }
 }
