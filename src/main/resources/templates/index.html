@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <title>Zomato-like Page</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+<header>
+    <nav>
+        <div class="left-nav">
+            <a href="#">Get the App</a>
+        </div>
+        <div class="right-nav">
+            <a href="#">Investor Relations</a>
+            <a href="#">Add restaurant</a>
+            <a href="#" id="loginLink">Log In</a>
+           <!-- <a href="#" id="signupLink">Sign In</a>-->
+        </div>
+    </nav>
+</header>
+
+<main>
+    <h1>EatEasy</h1>
+    <h2>Discover the best food & drinks in Pune</h2>
+
+    <div class="search-bar">
+        <select>
+            <option>Pune</option>
+        </select>
+        <input type="text" placeholder="Search for restaurant, cuisine or a dish">
+    </div>
+
+    <div class="image-gallery">
+        <!-- Add your image elements here -->
+    </div>
+</main>
+<section class="top-brands">
+    <h2>Top brands for you</h2>
+    <div class="brand-carousel-container">
+        <button class="scroll-btn left-btn">&lt;</button>
+        <div class="brand-carousel">
+            <div class="brand-item">
+                <img src="/img/McDonald.png" alt="McDonald's">
+                <h3>McDonald's</h3>
+                <p>34 min</p>
+            </div>
+            <div class="brand-item">
+                <img src="/img/McDonald.png" alt="Faasos">
+                <h3>Faasos - Wraps, Rolls & Shawarma</h3>
+                <p>38 min</p>
+            </div>
+            <div class="brand-item">
+                <img src="/img/McDonald.png" alt="Pizza Hut">
+                <h3>Pizza Hut</h3>
+                <p>40 min</p>
+            </div>
+            <div class="brand-item">
+                <img src="/img/McDonald.png" alt="Natural Ice Cream">
+                <h3>Natural Ice Cream</h3>
+                <p>30 min</p>
+            </div>
+            <div class="brand-item">
+                <img src="/img/McDonald.png" alt="Theobroma">
+                <h3>Theobroma</h3>
+                <p>29 min</p>
+            </div>
+            <div class="brand-item">
+                <img src="/img/McDonald.png" alt="Chitale Bandhu Mithaiwale">
+                <h3>Chitale Bandhu Mithaiwale</h3>
+                <p>31 min</p>
+            </div>
+            <div class="brand-item">
+                <img src="/img/McDonald.png" alt="McDonald's">
+                <h3>McDonald's</h3>
+                <p>34 min</p>
+            </div>
+            <div class="brand-item">
+                <img src="/img/McDonald.png" alt="Faasos">
+                <h3>Faasos - Wraps, Rolls & Shawarma</h3>
+                <p>38 min</p>
+            </div>
+            <div class="brand-item">
+                <img src="/img/McDonald.png" alt="Pizza Hut">
+                <h3>Pizza Hut</h3>
+                <p>40 min</p>
+            </div>
+            <div class="brand-item">
+                <img src="/img/McDonald.png" alt="Natural Ice Cream">
+                <h3>Natural Ice Cream</h3>
+                <p>30 min</p>
+            </div>
+            <div class="brand-item">
+                <img src="/img/McDonald.png" alt="Theobroma">
+                <h3>Theobroma</h3>
+                <p>29 min</p>
+            </div>
+            <div class="brand-item">
+                <img src="/img/McDonald.png" alt="Chitale Bandhu Mithaiwale">
+                <h3>Chitale Bandhu Mithaiwale</h3>
+                <p>31 min</p>
+            </div>
+            <div class="brand-item">
+                <img src="/img/McDonald.png" alt="McDonald's">
+                <h3>McDonald's</h3>
+                <p>34 min</p>
+            </div>
+            <div class="brand-item">
+                <img src="/img/McDonald.png" alt="Faasos">
+                <h3>Faasos</h3>
+                <p>38 min</p>
+            </div>
+            <div class="brand-item">
+                <img src="/img/McDonald.png" alt="Pizza Hut">
+                <h3>Pizza Hut</h3>
+                <p>40 min</p>
+            </div>
+            <div class="brand-item">
+                <img src="/img/McDonald.png" alt="Natural Ice Cream">
+                <h3>Natural Ice Cream</h3>
+                <p>30 min</p>
+            </div>
+            <div class="brand-item">
+                <img src="/img/McDonald.png" alt="Theobroma">
+                <h3>Theobroma</h3>
+                <p>29 min</p>
+            </div>
+            <div class="brand-item">
+                <img src="/img/McDonald.png" alt="Chitale Bandhu Mithaiwale">
+                <h3>Chitale Bandhu Mithaiwale</h3>
+                <p>31 min</p>
+            </div>
+        </div>
+        <button class="scroll-btn right-btn">&gt;</button>
+    </div>
+</section>
+
+<section class="restaurant-list">
+    <h2>Restaurants with online food delivery in Mumbai</h2>
+
+    <div class="filters">
+        <button class="filter-btn">Filter <span class="icon">&#9776;</span></button>
+        <button class="filter-btn">Sort By <span class="icon">&#9662;</span></button>
+        <button class="filter-btn">Fast Delivery</button>
+        <button class="filter-btn">New on Swiggy</button>
+        <button class="filter-btn">Ratings 4.0+</button>
+        <button class="filter-btn">Pure Veg</button>
+        <button class="filter-btn">Offers</button>
+        <button class="filter-btn">Rs. 300-Rs. 600</button>
+        <button class="filter-btn">Less than Rs. 300</button>
+    </div>
+
+    <div class="restaurant-grid">
+        <div class="restaurant-card">
+            <div class="restaurant-image" style="background-image: url('path_to_image1.jpg');">
+                <div class="offer">50% OFF UPTO ₹100</div>
+            </div>
+            <h3>Barbeque Nation</h3>
+            <div class="rating">
+                <span class="star">&#9733;</span> 4 • 45-50 mins
+            </div>
+            <p>North Indian, Barbecue, Bandra East</p>
+        </div>
+
+        <div class="restaurant-card">
+            <div class="restaurant-image" style="background-image: url('path_to_image2.jpg');">
+                <div class="offer">FREE DELIVERY</div>
+                <div class="sub-offer">₹150 OFF ABOVE...</div>
+            </div>
+            <h3>Domino's Pizza</h3>
+            <div class="rating">
+                <span class="star">&#9733;</span> 3.7 • 20-25 mins
+            </div>
+            <p>Pizzas, Italian, Pastas, Kurla West</p>
+        </div>
+
+        <!-- Add more restaurant cards as needed -->
+
+    </div>
+</section>
+
+
+<!-- Login Modal -->
+<div id="loginModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <img src="blinkit-logo.png" alt="EatEasy Logo" class="logo">
+        <h2>India's last minute app</h2>
+        <p>Log in or Sign up</p>
+        <div class="input-group">
+            <span class="country-code">+91</span>
+            <input type="tel" name="mobileNumber" id="mobileNumber" placeholder="Enter mobile number">
+        </div>
+        <button class="continue-btn" id="continueBtn">Continue</button>
+        <p class="terms">By continuing, you agree to our <a href="#">Terms of service</a> & <a href="#">Privacy policy</a>.</p>
+    </div>
+</div>
+<script>
+    document.getElementById("continueBtn").addEventListener("click", function () {
+        var mobileNumber = document.getElementById("mobileNumber").value;
+        // Validate mobile number input
+        if (!mobileNumber.match(/^[0-9]{10}$/)) {
+            alert("Mobile number is invalid");
+        } else if (mobileNumber.length !== 10) {
+            alert("Mobile number is invalid");
+        }
+
+        // Prepare the payload
+        var payload = {
+            mobileNumber: mobileNumber
+        };
+
+        // Send the payload to the backend API
+        fetch('/santacruz/u1/auth/send-otp', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(payload)
+        })
+            .then(response => response.json())
+            .then(data => {
+                console.log(data);
+                if (data.success) {
+                    // Show the OTP modal and set the phone number
+                    document.querySelector('.phone-number').textContent = '+91-' + mobileNumber;
+                    document.getElementById("otpModal").style.display = "block";
+                    // Store the mobile number in a hidden field for later use
+                    document.getElementById("hiddenMobileNumber").value = mobileNumber;
+                    startCountdown();
+                } else {
+                    alert("Something went wrong. Please try again later.");
+                }
+            })
+            .catch(error => {
+                console.error(error);
+                alert("Something went wrong. Please try again later.");
+            });
+    });
+</script>
+
+<!-- OTP Modal -->
+<div id="otpModal" class="modal">
+    <div class="modal-content">
+        <button class="back-btn">&larr;</button>
+        <h2>OTP Verification</h2>
+        <p>We have sent a verification code to</p>
+        <p class="phone-number"></p>
+        <div class="otp-input-group">
+            <input type="text" maxlength="1" id="otp1">
+            <input type="text" maxlength="1" id="otp2">
+            <input type="text" maxlength="1" id="otp3">
+            <input type="text" maxlength="1" id="otp4">
+        </div>
+        <input type="hidden" id="hiddenMobileNumber">
+        <p class="resend-code">Resend Code (in <span id="countdown">29</span> secs)</p>
+    </div>
+</div>
+<script>
+   <!-- function verifyOtp() {
+        &lt;!&ndash;var otp1 = document.getElementById("otp1").value;
+        var otp2 = document.getElementById("otp2").value;
+        var otp3 = document.getElementById("otp3").value;
+        var otp4 = document.getElementById("otp4").value;
+        var mobileNumber = document.getElementById("hiddenMobileNumber").value;
+        var url = "/verifyOtp?mobileNumber=" + mobileNumber + "&otp1=" + otp1 + "&otp2=" + otp2 + "&otp3=" + otp3 + "&otp4=" + otp4;
+        window.location.href = url;&ndash;&gt;
+
+
+    }-->
+</script>
+
+<script th:src="@{/js/script.js}"></script>
+</body>
+</html>

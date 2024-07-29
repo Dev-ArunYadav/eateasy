@@ -29,7 +29,6 @@ public class ProductService {
 
     public Optional<Products> deleteProducts(Long id) {
         Optional<Products> product = productRepository.findById(id);
-
         product.ifPresent(p -> productRepository.delete(p));
         return product;
     }

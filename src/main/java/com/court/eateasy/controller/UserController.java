@@ -8,6 +8,9 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.HashMap;
+import java.util.Map;
+
 @RestController
 @RequestMapping("/santacruz/u1/auth")
 public class UserController {
@@ -22,13 +25,16 @@ public class UserController {
     }
 
     @PostMapping("/verify-otp")
-    public ResponseEntity<String> verifyOtp(@Validated @RequestBody Users users, @RequestParam String otp) {
+    public ResponseEntity<Map<String,Boolean>> verifyOtp(@Validated @RequestBody Users users, @RequestParam String otp) {
         //String otp = users.getOtp();
         boolean isVerified = userService.verifyOtp(users.getMobileNumber(), otp);
+        Map<String, Boolean> response = new HashMap<>();
         if (isVerified) {
-            return ResponseEntity.ok(Constants.OTP_VERIFICATION_SUCCESS);
+            response.put(Constants.OTP_VERIFICATION_SUCCESS, true);
+            return ResponseEntity.ok(response);
         } else {
-            return ResponseEntity.ok(Constants.OTP_VERIFICATION_FAILED);
+            response.put(Constants.OTP_VERIFICATION_FAILED, false);
+            return ResponseEntity.ok(response);
         }
     }
 
