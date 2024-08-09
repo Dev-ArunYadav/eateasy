@@ -20,11 +20,12 @@ public class Sellers {
     private String name;
 
     @NotBlank(message = "Mobile number is required.")
+    @Column(nullable = false, unique = true)
     private String mobileNumber;
-
     @NotBlank(message = "Email Id is required.")
+    @Column(nullable = false, unique = true)
     private String email;
-
+    @Column(nullable = false)
     private String password;
     private String image;
     private String description;

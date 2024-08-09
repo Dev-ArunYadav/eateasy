@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class SellerService {
@@ -19,4 +20,17 @@ public class SellerService {
     public List<Sellers> getAllSellers(){
         return sellerRepository.findAll();
     }
+
+    public Optional<Sellers> getSellerById(Long sellerId){
+        return sellerRepository.findById(sellerId);
+    }
+
+    public void deleteSeller(Long sellerId) {
+        sellerRepository.deleteById(sellerId);
+    }
+
+    public void updateSeller(Sellers sellers){
+        sellerRepository.save(sellers);
+    }
+
 }

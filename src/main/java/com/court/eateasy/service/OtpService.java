@@ -12,7 +12,7 @@ public class OtpService {
 
     private final Map<String, String> otpStorage = new HashMap<>();
     private final Map<String, Long> otpExpiryMap = new HashMap<>();
-    private final int otpExpriryTime = 30;
+    private final int otpExpriryTime = 60;
 
     public String generateOtp(String mobilenumber) {
         Random random = new Random();
